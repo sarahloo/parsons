@@ -1,0 +1,385 @@
+/*------BASIC TEXT STYLING------*/
+
+@import url('https://fonts.googleapis.com/css?family=Alegreya+SC:400,700|Alegreya:400,400i');
+
+*{
+	margin:0;
+	padding:0;
+}
+
+body {
+	font-family: 'Alegreya', serif;
+	font-size: 1.6em;
+}
+
+a {
+	font-family: 'Alegreya SC', serif;
+	text-decoration: none;
+	color: #000000;
+}
+
+a:hover {
+	font-weight: bold;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.text-left {
+	text-align: left;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-italic {
+	font-style: italic;
+}
+
+.text-fade {
+	opacity: 0.3;
+	transition: 1s;
+}
+
+.text-fade:hover {
+	opacity: 1;
+}
+
+
+/*------LINK ANIMATIONS------*/
+
+.a-expand {
+	letter-spacing: 0;
+	transition: 1s;
+}
+
+.a-expand:hover {
+	letter-spacing: 1em;
+}
+
+.a-contract {
+	letter-spacing: 1em;
+}
+
+.a-contract:hover {
+	letter-spacing: 0;
+}
+
+.a-white {
+	color: #000000;
+	transition: 1s;
+}
+
+.a-white:hover {
+	color: #FFFFFF;
+}
+
+.a-alternate span:nth-of-type(odd), .a-alternate span:nth-of-type(even) {
+	position: relative;
+	top: 0em;
+	transition: 0.5s;
+}
+
+.a-alternate span:nth-of-type(odd):hover {
+	position: relative;
+	top: 0.25em;
+}
+
+.a-alternate span:nth-of-type(even):hover {
+	position: relative;
+	top: -0.25em;
+}
+
+.a-shake {
+	transform: rotate(0deg);
+	transition: 0.25s;
+}
+
+.a-shake:hover {
+	transform: rotate(30deg)
+}
+
+.a-volume {
+	font-size: 1em;
+	position: relative;
+	top: 0em;
+	transition: 1s;
+}
+
+.a-volume:hover {
+	font-size: 3em;
+	top: -0.5em;
+}
+
+.a-high {
+	position: relative;
+	top: 0;
+	transition: 2s;
+	transition-timing-function: ease-in-out;
+}
+
+.a-high:hover {
+	top: -10em;
+}
+
+.a-skew {
+	display: inline-block;
+	text-align: left;
+	position: relative;
+	top: 0;
+	transform: skewY(0deg);
+	transition: 1s;
+}
+
+.a-spin {
+	display: inline-block;
+}
+
+.a-spin div{
+	display: inline-block;
+	transform: rotateY(0deg);
+	transition: 2s;
+	transition-timing-function: ease-in-out;
+}
+
+.a-spin:hover div{
+	transform: rotateY(180deg);s
+}
+
+.a-skew:hover {
+	transform: skewY(45deg);
+	top: 1em;
+}
+
+.a-flatten {
+	display: inline-block;
+	padding-left: 0;
+	transform: skewX(0deg);
+	transition: 1s;
+}
+
+.a-flatten:hover {
+	padding-left: 1em;
+	transform: skewX(-60deg);
+}
+
+
+/*------INCREMENTAL TEXT ENLARGEMENT------*/
+
+
+.text-enlarge div:nth-of-type(1)  {
+	font-size: 0.6em;
+}
+
+.text-enlarge div:nth-of-type(2)  {
+	font-size: 0.7em;
+}
+
+.text-enlarge div:nth-of-type(3)  {
+	font-size: 0.8em;
+}
+
+.text-enlarge div:nth-of-type(4)  {
+	font-size: 0.8em;
+}
+
+.text-enlarge div:nth-of-type(5)  {
+	font-size: 0.9em;
+}
+
+.text-enlarge div:nth-of-type(6)  {
+	font-size: 0.9em;
+}
+
+.text-enlarge div:nth-of-type(7)  {
+	font-size: 1em;
+}
+
+.text-enlarge div:nth-of-type(8)  {
+	font-size: 1em;
+}
+
+.text-magnify div:nth-of-type(1)  {
+	font-size: 1em;
+}
+
+.text-magnify div:nth-of-type(2)  {
+	font-size: 1.1em;
+}
+
+.text-magnify div:nth-of-type(3)  {
+	font-size: 1.2em;
+}
+
+.text-magnify div:nth-of-type(4)  {
+	font-size: 1.3em;
+}
+
+.text-magnify div:nth-of-type(5)  {
+	font-size: 1.4em;
+}
+
+.text-magnify div:nth-of-type(6)  {
+	font-size: 1.5em;
+}
+
+.text-magnify div:nth-of-type(7)  {
+	font-size: 1.6em;
+}
+
+.text-magnify div:nth-of-type(8)  {
+	font-size: 1.7em;
+}
+
+
+/*------BODY COLOURS------*/
+
+.yellow {
+	background-color: #F1C40F;
+}
+
+.yellow-green {
+	background-color: #9CB22E;
+}
+
+.green {
+	background-color: #00956F;
+}
+
+.grass-green {
+	background-color: #8DB336;
+}
+
+.yellow-orange {
+	background-color: #FFB00A;
+}
+
+.orange {
+	background-color: #D64400;
+}
+
+.pale-blue {
+	background-color: #C8F5F5;
+}
+
+.gray-blue {
+	background-color: #373C5D;
+	color: #FFFFFF;
+}
+
+.gray-green {
+	background-color: #AAC3BD;
+}
+
+.violet {
+	background-color: #3D1967;
+	color: #FFFFFF;
+}
+
+.peach {
+	background-color: #FFCEB0;
+}
+
+.black {
+	background-color: #000000;
+	color: #FFFFFF;
+}
+
+.burgundy {
+	background-color: #680000;
+	color: #FFFFFF;
+}
+
+.white {
+	background-color: #EEEEEE;
+}
+
+.pale-yellow {
+	background-color: #F2E3B8;
+}
+
+/*------BASIC BLOCK POSITIONING------*/
+
+#viewport {
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	padding-top: 5%;
+}
+
+#left, #center, #right {
+	position: relative;
+	display: inline-block;
+	transition: 1s;
+}	
+
+#left {
+	float: left;
+	text-align: right;
+}
+
+#right {
+	float: right;
+	text-align: left;
+}
+
+#center {
+	width: auto;
+}
+
+
+/*------SPECIFIC BLOCK POSITIONING------*/
+
+.left1, .right1 {
+		width: 20%;
+}
+
+.left1:hover, .right1:hover {
+		width: 55%;
+}
+
+.right2, .left2 {
+	width: 25%;
+}
+
+.right2:hover, .left2:hover {
+	width: 58%;
+}
+
+#bottom2 {
+	margin-top: 6em;
+    transition: 1s;
+	line-height: 1.5em;
+}
+
+#bottom2:hover {
+	margin-top: 5em;
+	line-height: 2.3em;
+}
+
+#way1, #way2, #way3, #way4, #way5 {
+	font-family: 'Alegreya SC', serif;
+}
+
+#way2, #way3, #way3, #way4, #way5 {
+	opacity: 0;
+	transition: 2s;
+}
+
+#way1:hover #way2 {
+	opacity: 1;
+}
+
+#way2:hover #way3 {
+	opacity: 1;
+}
+
+#way3:hover #way4 {
+	opacity: 1;
+}
+
+#way4:hover #way5 {
+	opacity: 1;
+}

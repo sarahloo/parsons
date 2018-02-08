@@ -1,0 +1,124 @@
+body, p {
+        margin: 1em;
+        padding: 0;
+        font-family: 'Helvetica', 'Arial';
+    }
+
+#comp1, #comp2, #comp3, #comp4 {
+        width: 96%;
+        height: 95vh;
+        overflow: hidden;
+        border: solid black 2px;
+        position: absolute;
+        overflow: hidden;
+    }
+
+#box1 {
+        width: 30em;
+        height: 30em;
+        background-color: red;
+}
+
+#box2 {
+        width: 12em;
+        height: 12em;
+        background-color: black;
+    }
+
+#box3 {
+        width: 12em;
+        height: 12em;
+        background-color: gray;
+    } 
+
+#box4 {
+        width: 30px;
+        height: 30px;
+        background-color: dimgrey;
+    }
+
+#comp1 #box1 {
+        position: absolute;
+        left: 20%;
+        top: -5%;
+        -ms-transform: rotate(7deg);
+        -webkit-transform: rotate(7deg);
+        transform: rotate(7deg);
+    }  
+
+#comp2 #box1 {
+        position: fixed;
+        top: 2em;
+        left: -3em;
+        z-index: -1;
+        -ms-transform: rotate(30deg);
+        -webkit-transform: rotate(30deg);
+        transform: rotate(30deg);
+        background-color: blue;
+    }
+
+#comp2 #box2 {
+        position: absolute;
+        left: 60%;
+        top: 90%;
+        -ms-transform:skew(10deg,10deg);
+        -webkit-transform:skew(10deg,10deg);
+        transform:skew(10deg,10deg);
+    }
+
+
+#comp3 #box1 {
+        position: relative;
+        background-color: orange;
+        float: left;
+        margin: 5em;
+    }
+
+#comp3 #box2 {
+        position: relative;
+        float: left;
+    }
+
+#comp3 #box3 {
+        position: relative;
+        top: 80%;
+        -ms-transform: rotate(45deg); /* IE 9 */
+        -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+        transform: rotate(45deg);
+        background-color: blue;
+}
+
+#comp4 #box1 {
+        position: static;
+        -ms-transform:rotate(20deg);
+        -webkit-transform:rotate(20deg);
+        transform:rotate(20deg);
+        position: absolute;
+        bottom: -5em;
+        right: -10em;
+    }
+
+#comp4 #box2 {
+        position: fixed;
+        background-color: pink;
+        left: 5em;
+        top: 10em;
+        -ms-transform: skew(40deg) rotate(10deg) rotateX(30deg);
+        -webkit-transform: skew(40deg) rotate(10deg) rotateX(30deg);
+        transform: skew(40deg) rotate(10deg) rotateX(30deg);
+}
+
+#comp4 #box3 {
+        position: relative;
+        float: right;
+        right: 3em;
+        transform: rotateX(20deg) rotateY(30deg);
+}
+
+#comp4 #box4 {
+        position: absolute;
+        top: 15em;
+        -ms-transform: rotate(-20deg); /* IE 9 */
+        -webkit-transform: rotate(-20deg); /* Chrome, Safari, Opera */
+        transform: rotate(-20deg);
+}
