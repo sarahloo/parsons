@@ -1,0 +1,165 @@
+body, p {
+	margin: 0;
+	padding: 0;
+    }
+
+#frame {
+	width: 45em;
+	height: 35em;
+	background: linear-gradient(to right, #d7aa2a, #ddbe88, #d7aa2a);
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+}
+
+#table {
+	width: 45em;
+	height: 17.5em;
+	background: linear-gradient(#341e07, #90671b);
+	position: absolute;
+	transform: translateY(100%);
+}
+
+#bowl {
+	width: 22.5em;
+	height: 7.5em;
+	background-color: #f2d088;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+	border-bottom: 0.75em #f9e9cb solid;
+	position: absolute;
+	transform: translate(90%, 205%);
+	box-shadow: inset 3em 4em 5em #ad7a1f;
+}
+
+
+#lemon {
+	width: 8em;
+	height: 6em;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+	position: absolute;
+	background: linear-gradient(135deg, #f4a709, #cb6f01);
+	transform: rotate(-10deg);
+	bottom: 20%;
+	left: 22%;
+}
+
+#lemon:before {
+   content:"";
+   position: absolute;
+   right: 90%;
+   top: 2.25em;
+   width: 1.5em;
+   height: 1.25em;
+   background-color: #f4a709;
+   	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+}
+
+#lemon:after {
+   content:"";
+   position: absolute;
+   left: 90%;
+   top: 2.25em;
+   width: 1.5em;
+   height: 1.25em;
+   background-color: #cb6f01;
+   	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+}
+
+#blob {
+	width: 4em;
+	height: 3em;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+	position: absolute;
+	background: linear-gradient(120deg, #ffce07, #9f6905);
+	transform: rotate(20deg);
+	bottom: 34%;
+	left: 48%;
+}
+
+
+#pot {
+	border-top: 6.5em solid #7c673c;
+	border-left: 1em solid transparent;
+	border-right: 1em solid transparent;
+	height: 0;
+	width: 6em;
+	position: absolute;
+	left: -5%;
+	bottom: 18%;
+}
+
+#pot:before {
+	content: "";
+	width: 8em;
+	height: 3em;
+	background-color: #130000;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+	border-bottom: 0.5em solid #372616;
+	position: absolute;
+	transform: translate(-1em, -8em);
+}
+
+#pot:after {
+	content: "";
+	width: 6em;
+	height: 2em;
+	background-color: #7c673c;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+	position: absolute;
+	transform: translateY(-50%);
+}
+
+.oranges {
+	width: 8em;
+	height: 8em;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+	position: absolute;
+	background: linear-gradient(-135deg, #585609, #ca8c13);
+	box-shadow: inset -2em 0 3em #301a05;
+}
+
+.apples {
+	width: 8em;
+	height: 8em;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+	position: absolute;
+	background: linear-gradient(-135deg, #bf3200, #d65d06);
+	box-shadow: inset -1em 0 2em #3c1504;
+}
+
+.apple-stem {
+	width: 1em;
+	height: 1em;
+	background-color: #390c04;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+	position: relative;
+	left: 50%;
+	transform: translate(-50%, 150%);
+	box-shadow: 0.25em 0 1em #eda30c;
+}
+
+.dropshadow {
+	box-shadow: 0 1em 1em #eda30c;
+}
