@@ -1,0 +1,65 @@
+*{
+	margin:0;
+	padding:0;
+}
+
+body {
+	font-family: 'Helvetica', 'Arial', 'sans-serif';
+	font-size: 3em;
+	text-transform: uppercase;
+	letter-spacing: -0.05em;
+}
+
+@keyframes flash {
+    0% {opacity: 0;}
+    50% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+#main {
+	text-align: center;
+	vertical-align: top;
+	position: static;
+	height: 100vh;
+	overflow: hidden;
+}
+
+#left {
+	height: 100vh;
+	display: inline-block;
+	top: 0;
+}
+
+#right {
+	height: 100vh;
+	display: inline-block;
+	top: 0;
+}
+
+#center {
+	top: 0;
+	height: 100vh;
+	display: inline-block;
+}
+
+.time {
+	position: relative;
+    animation-name: flash;
+    animation-duration: 1s;
+    opacity: 0;
+}
+
+.text {
+	opacity: 0;
+	position: relative;
+	animation-name: flash;
+    animation-duration: 4s;
+}
+
+#left .text {
+	text-align: right;
+}
+
+#right .text {
+	text-align: left;
+}

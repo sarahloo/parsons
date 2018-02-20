@@ -1,0 +1,33 @@
+*{
+	margin:0;
+	padding:0;
+}
+
+body {
+	font-family: 'Helvetica', 'Arial', 'sans-serif';
+	text-transform: uppercase;
+	letter-spacing: -0.05em;
+  font-size: 2.75em;
+  line-height: 2em;
+}
+
+#main {
+  width: 100vw;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+}
+
+@keyframes flip {
+    0% {transform: rotateX(90deg);}
+    100% {transform: rotateX(0deg);}
+}
+
+.flip {
+  display: inline-block;
+  transform: rotateX(90deg);
+  animation-name: flip;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
