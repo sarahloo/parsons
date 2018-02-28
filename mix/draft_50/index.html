@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="scripts.js"></script>
+	<title>Mix - final</title>
+</head>
+
+<body>
+<!-- main stage that disappears before bridge -->
+
+	<div class="stage center stageanimate">
+
+<!-- main audio and video elements -->
+
+		<audio autoplay>
+			<source src="audio/wonderful_world-edit2-small.mp3" type="audio/mpeg">
+		</audio>
+
+		<audio id="doghowl">
+			<source src="audio/doghowl.mp3" type="audio/mpeg">
+		</audio>
+
+		<video id="globe" class="center" autoplay loop>
+			<source src="videos/earth-compressed.mp4" type="video/mp4">
+			<source src="videos/earth-compressed.ogg" type="video/ogg">
+		</video>
+
+<!-- rotating images -->
+
+		<img src="images/apple.gif" id="apple" class="center">
+		<img src="images/sun.gif" id="sun" class="center">
+		<div id="record" class="center">
+			<img src="images/goldenrecord-transparent.png">
+		</div>
+
+<!-- floating images -->
+
+		<div id="glove">
+			<img src="images/glove-transparent.png" width=100% class="spin">
+		</div>
+
+		<div id="astronaut-fadein">
+			<div class="float">
+				<img id="astronaut" class="spin" style="animation-play-state: paused;" src="images/astronaut-transparent.png">
+			</div>
+		</div>
+
+		<div id="vanguard-fadein">
+			<div id="vanguard">
+				<img src="images/vanguard1-transparent.png" width=400%>
+			</div>
+		</div>
+
+		<div id="laika">
+			<img src="images/laika-transparent.png" width=100%>
+		</div>
+
+		<div id="chimp-fadein">
+			<div class="float">
+				<img id="chimp" src="images/chimp-transparent.png">
+			</div>
+		</div>
+
+<!-- div creating pulsating effect -->
+
+		<div id="black"></div>
+
+	</div> <!-- close stage -->
+
+<!-- hidden videos for bridge -->
+	<div class="stage center" style="pointer-events: none;">
+		<video id="moviemontage" class="fullscreen center">
+			<source src="videos/moviemontage.mp4" type="video/mp4">
+		</video>
+	</div>
+
+	<div id="glove2">
+			<img src="images/glove-transparent.png" width=100% class="spin">
+	</div>
+
+
+<!-- lyrics, outside of main stage -->
+	<div class="lyrics" id="lyrics-verse">
+		もー、会えないんだな。
+		嘘みたいだな。
+		眠り方も忘れたみたい。
+		積もる月日、
+		それらがいま
+		二人を離していくところ。
+	</div>
+
+	<div class="lyrics" id="lyrics-bridge">
+		悲しみコードは爆音です。
+		君の声も聞こえない、届かない。
+		ざわめく風が薫る、るる ―。
+	</div>
+
+	<div class="chorus" style="animation-delay: 57s;">
+		<div class="typewriter" style="animation-delay: 52s;">ALONE AGAIN</div>
+		<div class="typewriter" style="animation-delay: 55s;">頼りない世界</div>
+	</div>
+
+	<div class="chorus" style="animation-delay: 62.5s;">
+		<div class="typewriter" style="animation-delay: 57.5s;">グルグル、</div>
+		<div class="typewriter" style="animation-delay: 60.5s;">いつまでも回る。</div>
+	</div>
+
+	<div class="chorus" style="animation-delay: 68s;">
+		<div class="typewriter" style="animation-delay: 63s;">うずまく</div>
+		<div class="typewriter" style="animation-delay: 66s;">心は七色。</div>
+	</div>
+
+	<div class="chorus" style="animation-delay: 72s;">
+		<div class="typewriter" style="animation-delay: 69s;">また会えるのかな？</div>
+	</div>
+
+	<div class="chorus" style="animation-delay: 79s;">
+		<div class="typewriter" style="animation-delay: 72s;">HELLO?</div>
+		<div class="typewriter" style="animation-delay: 74.5s;">HELLO?</div>
+		<div class="typewriter" style="animation-delay: 76s;">届いたなら</div>
+	</div>
+
+	<div class="chorus" style="animation-delay: 82.5s;">
+		<div class="typewriter" style="animation-delay: 79.5s; animation-duration: 2s;">
+		意地悪な<br/>WONDERFUL WORLD。</div>
+	</div>
+
+<!-- 		哀愁ナラ今日モ更新終了
+		感傷ナラ明日モ申請中 -->
+
+</body>
+</html>

@@ -1,0 +1,342 @@
+*{
+	margin:0;
+	padding:0;
+}
+
+body {
+	background-color: #000000;
+	color: #FFFFFF;
+	font-size: 3em;
+	overflow: hidden;
+}
+
+/*p {
+	padding: 0.5em;
+}*/
+
+img {
+	position: absolute;
+}
+
+@keyframes show {
+	0% {opacity: 0;}
+	100% {opacity: 1;}
+}
+
+@keyframes visibletrigger {
+	0% {opacity: 0;}
+	10% {opacity: 1;}
+	90% {opacity: 1;}
+	100% {opacity: 0;}
+}
+
+@keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}
+
+@keyframes rotateaxis {
+    from {transform:rotateY(0deg);}
+    to {transform:rotateY(-360deg);}
+}
+
+@keyframes pulse {
+    from {opacity: 0.4;}
+    to {opacity: 0;}
+}
+
+@keyframes float {
+	from {transform:translateY(3em);}
+	to {transform:translateY(0em);}
+}
+
+@keyframes drift {
+	from {top: 0%; left: -20%;}
+	to {top: 100%; left: 120%;}
+}
+
+@keyframes orbit {
+	100% { transform:rotate(-360deg); }
+	}
+
+@keyframes lyricscroll {
+	0% {left: 100%;}
+	100% {left: -200%;}
+}
+
+@keyframes stageanimate {
+	0% {width: 100vw; height: 100vh; transform: translate(-50%, -50%) rotate(0deg);}
+	100% {width: 2vw; height: 2vh; transform: translate(-50%, -50%) rotate(360deg);}
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: white; }
+}
+
+@keyframes scrollup {
+	0% {opacity: 1; top: 80%;}
+	100% {opacity: 0; top: 0%;}
+}
+
+.stage {
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+}
+
+.stageanimate {
+	animation: stageanimate;
+    animation-duration: 8s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 84s;
+    animation-fill-mode: both;
+}
+
+.center {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	z-index: -1;
+}
+
+.fullscreen {
+	width: 100%;
+}
+
+.float {
+	position: relative;
+	animation: float 6s ease-in-out infinite;
+	animation-direction: alternate;
+}
+
+.spin {
+	animation: spin 6s linear infinite;
+}
+
+.drift {
+	animation: drift 10s linear infinite;
+}
+
+.lyrics {	
+	position: absolute;
+	left: 100%;
+	display: inline-block;
+	bottom: 0.5em;
+	opacity: 0.25;
+	white-space: nowrap;
+	transition: 1s;
+}
+
+.lyrics:hover {
+	opacity: 1;
+}
+
+.chorus {
+	pointer-events: none;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%);
+	animation-name: scrollup;
+	animation-duration: 1s;
+	animation-timing-function: ease-in;
+	animation-fill-mode: both;
+}
+
+.typewriter {
+  text-align: center;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .1em solid white; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  /*letter-spacing: .15em; *//* Adjust as needed */
+  animation: 
+    typing 1.5s both steps(10, end),
+    blink-caret .75s both step-end infinite;
+}
+
+#black {
+	pointer-events: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	background-color: #000000;
+    animation-name: pulse;
+    animation-duration: 0.35s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#globe {
+	width: 80%;
+	position: absolute;
+}
+
+#apple {
+	position: absolute;
+	width: 45%;
+	opacity: 0;
+	animation-name: visibletrigger;
+    animation-duration: 6s;
+    animation-delay: 52.5s;
+}
+
+#sun {
+	position: absolute;
+	width: 72%;
+	opacity: 0;
+	animation-name: visibletrigger;
+    animation-duration: 6s;
+    animation-delay: 58s;
+}
+
+#record {
+	position: absolute;
+	width: 40%;
+	padding-top: 40%;
+	opacity: 0;
+	background-color: #000000;
+	animation-name: visibletrigger;
+    animation-duration: 6.5s;
+    animation-delay: 63.5s;	
+}
+
+#record img {
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+	animation: rotateaxis 1.5s linear infinite;
+}
+
+#glove {
+	position: absolute;
+	width: 15%;
+	height: 2em;
+	z-index: 1;
+	top: 0%;
+	left: -20%;
+}
+
+#glove2 {
+	position: absolute;
+	width: 15%;
+	height: 2em;
+	z-index: 1;
+	top: 0%;
+	left: -20%;
+	animation: drift 10s linear 100s infinite;
+}
+
+#astronaut-fadein {
+	opacity: 0;
+    animation-name: show;
+    animation-duration: 4s;
+    animation-delay: 4s;
+    animation-fill-mode: both;
+}
+
+#astronaut {
+	position: absolute;
+	left: 5%;
+	top: 15%;
+	width:25%;
+}
+
+#vanguard-fadein {
+	pointer-events: none;
+	opacity: 0;
+    animation-name: visibletrigger;
+    animation-duration: 39s;
+    animation-delay: 15s;
+}
+
+#vanguard {
+	width:100px;
+	height:100px;
+	margin-top: 180px;
+	transform-origin: 1000% center;
+	position:relative;
+	animation: orbit 8s linear infinite;
+}
+
+#chimp-fadein {
+	opacity: 0;
+    animation-name: visibletrigger;
+    animation-duration: 22s;
+    animation-delay: 30s;
+}
+
+#chimp {
+	position:relative;
+	width: 15%;
+	left: 80%;
+	bottom: 5%;
+	transition: 5s ease-in-out;
+}
+
+#chimp:hover {
+	transform: translateX(-30em);
+}
+
+#lyrics-verse {
+	animation-name: lyricscroll;
+    animation-duration: 30s;
+    animation-delay: 4s;
+    animation-timing-function: linear;
+}
+
+#lyrics-bridge {
+	animation-name: lyricscroll;
+    animation-duration: 36s;
+    animation-delay: 26s;
+    animation-timing-function: linear;
+}
+
+#doghowl {
+}
+
+/*videos*/
+
+#moviemontage {
+	opacity: 0;
+	animation-name: visibletrigger;
+    animation-duration: 27s;
+    animation-delay: 92s;
+}
+
+/*dog follows cursor*/
+
+.left {
+        -moz-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        filter: FlipH;
+        -ms-filter: "FlipH";
+}
+.right {
+        -moz-transform: scaleX(1);
+        -o-transform: scaleX(1);
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+        filter: FlipH;
+        -ms-filter: "FlipH";
+}
+
+#laika {
+	width: 12.5%;
+	transition: transform .5s;
+	opacity: 0;
+    animation-name: visibletrigger;
+    animation-duration: 13s;
+    animation-delay: 39s;
+}
