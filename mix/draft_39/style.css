@@ -1,0 +1,262 @@
+*{
+	margin:0;
+	padding:0;
+}
+
+body {
+	background-color: #000000;
+	color: #FFFFFF;
+	font-size: 3em;
+	overflow: hidden;
+/*	font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+*/}
+
+p {
+	padding: 0.5em;
+}
+
+img {
+	position: absolute;
+}
+
+@keyframes show {
+	0% {opacity: 0;}
+	100% {opacity: 1;}
+}
+
+@keyframes visibletrigger {
+	0% {opacity: 0;}
+	10% {opacity: 1;}
+	90% {opacity: 1;}
+	100% {opacity: 0;}
+}
+
+@keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}
+
+@keyframes rotateaxis {
+    from {transform:rotateY(0deg);}
+    to {transform:rotateY(-360deg);}
+}
+
+@keyframes pulse {
+    from {opacity: 0.4;}
+    to {opacity: 0;}
+}
+
+@keyframes float {
+	from {transform:translateY(3em);}
+	to {transform:translateY(0em);}
+}
+
+@keyframes drift {
+	from {top: 0%; left: -20%;}
+	to {top: 100%; left: 120%;}
+}
+
+@keyframes orbit {
+	100% { transform:rotate(-360deg); }
+	}
+
+@keyframes lyricscroll {
+	0% {left: 100%;}
+	100% {left: -100%;}
+}
+
+@keyframes viewportanimate {
+	0% {width: 100vw; height: 100vh;}
+	100% {width: 10vw; height: 10vh;}
+}
+
+#viewport {
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+/*	overflow: hidden;
+*/	transition: 5s;
+}
+
+.viewportanimate {
+/*	animation: viewportanimate 10s ease-in-out;
+*/}
+
+#globe {
+	width: 80%;
+	position: absolute;
+}
+
+#apple {
+	position: absolute;
+	width: 45%;
+	opacity: 0;
+	animation-name: visibletrigger;
+    animation-duration: 6s;
+    animation-delay: 52.5s;
+}
+
+#apple:hover {
+	cursor: crosshair;
+}
+
+#sun {
+	position: absolute;
+	width: 72%;
+	opacity: 0;
+	animation-name: visibletrigger;
+    animation-duration: 6s;
+    animation-delay: 58s;
+}
+
+#record {
+	position: absolute;
+	width: 40%;
+	padding-top: 40%;
+	opacity: 0;
+	background-color: #000000;
+	animation-name: visibletrigger;
+    animation-duration: 6.5s;
+    animation-delay: 63.5s;	
+}
+
+#record img {
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+	animation: rotateaxis 1.5s linear infinite;
+}
+
+#glove {
+	position: absolute;
+	width: 15%;
+	height: 2em;
+	z-index: 1;
+	top: 0%;
+	left: -20%;
+}
+
+#astronaut-fadein {
+	opacity: 0;
+    animation-name: show;
+    animation-duration: 4s;
+    animation-delay: 4s;
+    animation-fill-mode: both;
+}
+
+#astronaut {
+	position: absolute;
+	left: 5%;
+	top: 15%;
+	width:25%;
+}
+
+
+#vanguard-fadein {
+	opacity: 0;
+    animation-name: visibletrigger;
+    animation-duration: 39s;
+    animation-delay: 15s;
+}
+
+#vanguard {
+	width:100px;
+	height:100px;
+	margin-top: 180px;
+	transform-origin: 1000% center;
+	position:relative;
+	animation: orbit 8s linear infinite;
+}
+
+#chimp-fadein {
+	opacity: 0;
+    animation-name: visibletrigger;
+    animation-duration: 22s;
+    animation-delay: 30s;
+}
+
+#chimp {
+	position:relative;
+	width: 15%;
+	left: 80%;
+	bottom: 5%;
+}
+
+#lyrics {
+	position: absolute;
+	left: 100%;
+	display: inline-block;
+	bottom: 1em;
+	opacity: 0.5;
+	white-space: nowrap;
+	animation-name: lyricscroll;
+    animation-duration: 100s;
+}
+
+#doghowl {
+}
+
+.center {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	z-index: -1;
+}
+
+.black {
+	pointer-events: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	background-color: #000000;
+    animation-name: pulse;
+    animation-duration: 0.35s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.float {
+	position: relative;
+	animation: float 6s ease-in-out infinite;
+	animation-direction: alternate;
+}
+
+.spin {
+	animation: spin 6s linear infinite;
+}
+
+.drift {
+	animation: drift 10s linear;
+}
+
+/*dog follows cursor*/
+
+.left {
+        -moz-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        filter: FlipH;
+        -ms-filter: "FlipH";
+}
+.right {
+        -moz-transform: scaleX(1);
+        -o-transform: scaleX(1);
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+        filter: FlipH;
+        -ms-filter: "FlipH";
+}
+
+#laika {
+	width: 12.5%;
+	transition: transform .5s;
+	opacity: 0;
+    animation-name: visibletrigger;
+    animation-duration: 13s;
+    animation-delay: 39s;
+}

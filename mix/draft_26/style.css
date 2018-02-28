@@ -1,0 +1,164 @@
+*{
+	margin:0;
+	padding:0;
+}
+
+body {
+	background-color: #000000;
+	color: #FFFFFF;
+	font-size: 3em;
+/*	font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+*/}
+
+p {
+	padding: 0.5em;
+}
+
+img {
+	position: absolute;
+}
+
+@keyframes pulse {
+    from {opacity: 0.4;}
+    to {opacity: 0;}
+}
+
+@keyframes float {
+	from {transform:translateY(3em);}
+	to {transform:translateY(0em);}
+}
+
+@keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}
+
+@keyframes drift {
+	from {top: 0%; left: -20%;}
+	to {top: 100%; left: 120%;}
+}
+
+@keyframes visibletrigger {
+	0% {opacity: 0;}
+	10% {opacity: 1;}
+	90% {opacity: 1;}
+	100% {opacity: 0;}
+}
+
+@keyframes lyricscroll {
+	0% {top: 100%;}
+	100% {top: -100%;}
+}
+
+#viewport {
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+}
+
+#globe {
+	width: 80%;
+	position: absolute;
+}
+
+#apple {
+	position: absolute;
+	width: 45%;
+	opacity: 0;
+	animation-name: visibletrigger;
+    animation-duration: 32s;
+    animation-delay: 52s;
+}
+
+#glove {
+	position: absolute;
+	width: 15%;
+	height: 2em;
+	z-index: 1;
+	top: 0%;
+	left: -20%;
+}
+
+#astronaut {
+	position: absolute;
+	left: 5%;
+	top: 15%;
+	width:25%;
+}
+
+
+#lyrics {
+	position: absolute;
+	top: 100%;
+	right: 0em;
+	opacity: 0.5;
+	animation-name: lyricscroll;
+    animation-duration: 145s;
+    animation-delay: 1s;
+}
+
+.center {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	z-index: -1;
+}
+
+.black {
+	pointer-events: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	background-color: #000000;
+    animation-name: pulse;
+    animation-duration: 0.35s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.float {
+	position: relative;
+	animation: float 6s ease-in-out infinite;
+	animation-direction: alternate;
+}
+
+.spin {
+	animation: spin 6s linear infinite;
+}
+
+.drift {
+	animation: drift 10s linear infinite;
+}
+
+/*dog follows cursor*/
+
+.left {
+        -moz-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        filter: FlipH;
+        -ms-filter: "FlipH";
+}
+.right {
+        -moz-transform: scaleX(1);
+        -o-transform: scaleX(1);
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+        filter: FlipH;
+        -ms-filter: "FlipH";
+}
+
+#laika {
+	width: 12.5%;
+	transition: transform .5s;
+	pointer-events: none;
+	opacity: 0;
+    animation-name: visibletrigger;
+    animation-duration: 22s;
+    animation-delay: 30s;
+}
