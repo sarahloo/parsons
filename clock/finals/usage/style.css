@@ -1,0 +1,104 @@
+*{
+	margin:0;
+	padding:0;
+}
+
+body {
+	font-family: 'Helvetica', 'Arial', 'sans-serif';
+	font-size: 2.75em;
+  line-height: 3em;
+  letter-spacing: 0.15em;
+	text-transform: uppercase;
+  overflow: hidden;
+}
+
+@keyframes typing {
+  0% { width: 100% }
+  20% { width: 0% }
+  60% { width: 0% }
+  80% {width: 100%}
+  100% { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: black }
+}
+
+/*centering animation and positioning text*/
+
+#main {
+  position: absolute;
+  width: 20em;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#wrapper1, #wrapper2, #wrapper5, #wrapper6 {
+  float: right;
+}
+
+/*typing animation*/
+
+.typewriter { 
+  position: relative;
+  float: left;
+}
+
+.typewriter span {
+    position:absolute;
+    top:0;
+    right:0;
+    width:0;
+    background-color: white;
+    border-left: .1em solid white;
+    box-sizing: border-box;
+    animation: typing 9s steps(9, end) infinite both,
+    blink-caret 0.75s step-end infinite;
+}
+
+/*staggering animation*/
+
+#wrapper1 .typewriter span {
+  animation-delay: 0.5s;
+}
+
+#wrapper2 .typewriter span {
+  animation-duration: 7s;
+}
+
+#wrapper3 .typewriter span {
+  animation-delay: 1s;
+  animation-duration: 5s;
+}
+
+#wrapper4 .typewriter span {
+  animation-duration: 8s;
+  animation-delay: 1.5s;
+}
+
+#wrapper5 .typewriter span {
+  animation-duration: 3s;
+  animation-delay: 2s;
+}
+
+#wrapper6 .typewriter span {
+  animation-duration: 7s;
+  animation-delay: 2.5s;
+}
+
+#wrapper7 .typewriter span {
+  animation-duration: 4s;
+  animation-delay: 3s;
+}
+
+#wrapper8 .typewriter span {
+  animation-duration: 10s;
+  animation-delay: 3.5s;
+}
+
+#wrapper9 .typewriter span {
+  animation-duration: 12s;
+  animation-delay: 4s;
+}
