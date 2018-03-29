@@ -50,11 +50,11 @@ img {
 }
 
 .scrollleft {
-	animation: scroll 8s linear 0s infinite normal both running;
+	animation: scroll 16s linear 0s infinite normal both running;
 }
 
 .scrollright {
-	animation: scroll 8s linear 0s infinite reverse both running;
+	animation: scroll 16s linear 0s infinite reverse both running;
 }
 
 .scrollright:hover, .scrollleft:hover {
@@ -75,7 +75,7 @@ img {
 	}
 
 	.scrollleft, .scrollright {
-	animation-duration: 12s;
+	animation-duration: 24s;
 	}
 }
 
