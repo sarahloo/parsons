@@ -23,7 +23,7 @@
 body {
 	overflow: hidden;
 	font-family: IBMPlexMonoLight, sans-serif;
-	background-color: #afd5fd;
+	background-color: #DDDDDD;
 }
 
 select{
@@ -32,7 +32,7 @@ select{
     font-family: IBMPlexMonoSemiBoldItalic;
 	font-size: inherit;
 	padding-right: 1.5em;
-	background-color: #afd5fd;
+	background-color: #DDDDDD;
 	background-image: url(../assets/_arrow-outline.svg);
     background-position: right;
     background-repeat: no-repeat;
@@ -66,8 +66,9 @@ img {
 	width: 600px;
 	height: 100vh;
 	z-index: 1;
-	background-color: white;
+	background-color: #DDDDDD;
 	transition: 1s;
+	border-right: solid black 2px;
 }
 
 #info p {
@@ -94,6 +95,7 @@ img {
 	font-family: IBMPlexMonoSemibold;
 	font-size: 0.75em;
 	padding-bottom: 0.5em;
+	width: 100px;
 }
 
 #row1, #row2, #row3, #row4 {
@@ -145,13 +147,19 @@ img {
 	}
 }
 
+@media only screen and (max-width: 1499px) {
+	body {
+		font-size: 14px;
+	}
+}
+
 @media only screen and (max-width: 999px) {
 	#row1, #row2, #row3, #row4 {
 		width: 400vw;
 	}
 
-	#filter {
-		font-size: 1.25em;
+	body {
+		font-size: 12px;
 	}
 }
 
