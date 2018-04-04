@@ -1,0 +1,6 @@
+$(document).ready(function(){
+	responsiveVoice.speak("O Romeo, Romeo! Wherefore art thou Romeo? Deny thy father and refuse thy name, or, if thou wilt not, be but sworn my love, and I'll no longer be a Capulet.", "UK English Female", {pitch: 0.9, volume: 0.8});
+	responsiveVoice.speak("Shall I hear more, or shall I speak at this?", "UK English Male", {volume: 0.5, pitch: 0.8});
+	responsiveVoice.speak("Tis but thy name that is my enemy, Thou art thyself, though not a Montague. What's Montague? It is nor hand, nor foot, Nor arm, nor face, nor any other part belonging to a man. O, be some other name. What's in a name? That which we call a rose By any other name would smell as sweet, So Romeo would, were he not Romeo call'd, Retain that dear perfection which he owes Without that title. Romeo, doff thy name, And for that name, which is no part of thee, Take all myself.", "UK English Female", {pitch: 1.1, rate: 1.025});
+	responsiveVoice.speak("I take thee at thy word. Call me but love, and I'll be new baptis'd, Henceforth I never will be Romeo.", "UK English Male", {pitch: 1.2, volume: 1.3});
+});
