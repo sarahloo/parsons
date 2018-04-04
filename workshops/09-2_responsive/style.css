@@ -1,0 +1,70 @@
+*{
+	margin:0;
+	padding:0;
+}
+
+body {
+	overflow: hidden;
+	background-color: #000000;
+}
+
+#main {
+	width: 100vw;
+	height: 100vh;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: (50%, 50%);
+	background: url(assets/eatme_03-animated.gif);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-color: rgb(255, 45, 105);
+	background-blend-mode: luminosity;
+	transition: 0.8s;
+}
+
+@media screen and (max-width: 1024px) {
+	#main {
+		background: url(assets/drinkme_01.png);
+		background-position: center;
+		background-size: cover;
+		background-color: rgb(210, 20, 175);
+	}
+}
+
+@media screen and (max-width: 768px) {
+	#main {
+		background: url(assets/eatme_02.jpg);
+		background-position: center;
+		background-size: cover;
+		background-color: rgb(178, 0, 255);
+	}
+}
+
+@media screen and (max-width: 600px) {
+	#main {
+		background: url(assets/drinkme_02.jpg);
+		background-position: center;
+		background-size: cover;
+		background-color: rgb(0, 135, 255);
+	}
+}
+
+@media screen and (max-width: 480px) {
+	#main {
+		background: url(assets/drinkme_03.jpg);
+		background-position: center;
+		background-size: cover;
+		background-color: rgb(0, 208, 255);
+	}
+}
+
+@media screen and (max-width: 360px) {
+	#main {
+		background: url(assets/eatme_01.jpg);
+		background-position: center;
+		background-size: cover;
+		background-color: rgb(153, 255, 0);
+	}
+}
