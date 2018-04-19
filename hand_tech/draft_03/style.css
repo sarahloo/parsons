@@ -1,0 +1,27 @@
+*{
+	margin:0;
+	padding:0;
+}
+
+body {
+	overflow: hidden;
+}
+
+p {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -75%);
+	font-family: 'Helvetica', sans-serif;
+	font-size: 4em;
+	font-weight: bold;
+	letter-spacing: -0.05em;
+	line-height: -1em;
+}
+
+#window {
+	width: 100vw;
+	height: 100vh;
+	background-color: rgb(255, 220, 190);
+	transition: 0.5s;
+}

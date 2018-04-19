@@ -1,0 +1,15 @@
+*{
+	margin:0;
+	padding:0;
+}
+
+body {
+	overflow: hidden;
+}
+
+#window {
+	width: 100vw;
+	height: 100vh;
+	background-color: rgb(255, 220, 190);
+	transition: 0.5s;
+}
